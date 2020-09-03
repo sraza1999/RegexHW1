@@ -107,14 +107,14 @@ def proper_nouns():
 def main():
 	# Get the regex from function
 	regex = capital_letters()
-	a = plural_words()
+	a = upper_lower()
 	
 
 	# Compile the regex
 	p = re.compile(a)
 
 	# Let us test our regex with a valid string
-	test = 'dog'
+	test = ''
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
