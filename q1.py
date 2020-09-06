@@ -30,7 +30,8 @@ def capital_letters():
 # Returns: regex as a valid python string
 def letters_digits():
 	# [YOUR CODE HERE]
-	return r"^*[^A-Z^a-z^0-9]*$"
+	return r"\W"
+	#return r"^*[^A-Z^a-z^0-9]*$"
 
 
 # Q1(b): the set of strings that contain only uppercase letters or only lowercaseletters, but not both
@@ -57,7 +58,7 @@ def alpha_ab():
 # Q1(e): the set of all strings that start with a word and that end with one or more digits
 # Return: regex as a valid python string
 def word_digits():
-	return ""
+	return "^.* "
 
 
 # Q1(f): the set of all strings that have the exact words 'corona' and 'virus' in them
@@ -85,7 +86,7 @@ def slash():
 # Return: regex as a valid python string
 def whitespace():
 	# [YOUR CODE HERE]
-	return ""
+	return ".*^ .*"
 
 
 # Q1(j):  the set of all English proper nouns, under the simplifying assumption that all English proper nouns have the first letter of each word capitalized
