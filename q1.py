@@ -51,7 +51,7 @@ def plural_words():
 # Return: regex as a valid python string
 def alpha_ab():
 	# [YOUR CODE HERE]
-	return ""
+	return r""
 
 
 # Q1(e): the set of all strings that start with a word and that end with one or more digits
@@ -71,7 +71,7 @@ def coronavirus():
 # Return: regex as a valid python string
 def one_digit():
 	# [YOUR CODE HERE]
-	return ""
+	return r"^[0-9]$"
 
 
 # Q1(h): the set of all strings that have a slash (/) in them
@@ -107,14 +107,14 @@ def proper_nouns():
 def main():
 	# Get the regex from function
 	regex = capital_letters()
-	a = upper_lower()
+	a = one_digit()
 	
 
 	# Compile the regex
 	p = re.compile(a)
 
 	# Let us test our regex with a valid string
-	test = ''
+	test = '4'
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
@@ -123,7 +123,7 @@ def main():
 
 	# Let us test our regex with an invalid string.
 	# Why is it invalid?
-	test = 'hhaaA'
+	test = '9'
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
