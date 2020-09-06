@@ -64,7 +64,7 @@ def word_digits():
 # Return: regex as a valid python string
 def coronavirus():
 	# [YOUR CODE HERE]
-	return ""
+	return r".* corona .*|.* virus .*"
 
 
 # Q1(g): the set of all strings that have exactly one digit in them
@@ -107,14 +107,14 @@ def proper_nouns():
 def main():
 	# Get the regex from function
 	regex = capital_letters()
-	a = one_digit()
+	a = letters_digits()
 	
 
 	# Compile the regex
 	p = re.compile(a)
 
 	# Let us test our regex with a valid string
-	test = '4'
+	test = '#$@{}:{}.?:{}:"~@!+++_    ==-||\]|\#'
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
