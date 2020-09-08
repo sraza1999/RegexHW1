@@ -30,15 +30,14 @@ def capital_letters():
 # Returns: regex as a valid python string
 def letters_digits():
 	# [YOUR CODE HERE]
-	return r"\W"
-	#return r"^*[^A-Z^a-z^0-9]*$"
+	return r"^[^A-Z^a-z^0-9]*$"
 
 
 # Q1(b): the set of strings that contain only uppercase letters or only lowercaseletters, but not both
 # Return: regex as a valid python string
 def upper_lower():
 	# [YOUR CODE HERE]
-	return r"^[a-z]*$|^[A-Z]*$"
+	return r"^[a-z]+$|^[A-Z]+$"
 
 
 # Q1(c): the set of all plural English words, under the simplifying assumption that all English plurals end in s or es
@@ -58,21 +57,21 @@ def alpha_ab():
 # Q1(e): the set of all strings that start with a word and that end with one or more digits
 # Return: regex as a valid python string
 def word_digits():
-	return "^.* "
+	return ""
 
 
 # Q1(f): the set of all strings that have the exact words 'corona' and 'virus' in them
 # Return: regex as a valid python string
 def coronavirus():
 	# [YOUR CODE HERE]
-	return r".* corona .*|.* virus .*"
+	return ""
 
 
 # Q1(g): the set of all strings that have exactly one digit in them
 # Return: regex as a valid python string
 def one_digit():
 	# [YOUR CODE HERE]
-	return r"^[0-9]$"
+	return ""
 
 
 # Q1(h): the set of all strings that have a slash (/) in them
@@ -86,7 +85,7 @@ def slash():
 # Return: regex as a valid python string
 def whitespace():
 	# [YOUR CODE HERE]
-	return ".*^ .*"
+	return ""
 
 
 # Q1(j):  the set of all English proper nouns, under the simplifying assumption that all English proper nouns have the first letter of each word capitalized
@@ -108,14 +107,14 @@ def proper_nouns():
 def main():
 	# Get the regex from function
 	regex = capital_letters()
-	a = letters_digits()
+	a = upper_lower()
 	
 
 	# Compile the regex
 	p = re.compile(a)
 
 	# Let us test our regex with a valid string
-	test = '#$@{}:{}.?:{}:"~@!+++_    ==-||\]|\#'
+	test = ''
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
@@ -124,7 +123,7 @@ def main():
 
 	# Let us test our regex with an invalid string.
 	# Why is it invalid?
-	test = '9'
+	test = 'hhaaA'
 	match = p.match(test)
 	if match is None:
 		print('No Match: {0}'.format(test))
