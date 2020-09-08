@@ -24,7 +24,7 @@ def capital_letters():
 	# [A-Z] indicates all capital letters
 	# [A-Z]+ indicates one or more capital letters
     return r"^[A-Z]+$"
-
+#fambam
 
 # Q1(a): the set of strings that contain no letters or digits
 # Returns: regex as a valid python string
